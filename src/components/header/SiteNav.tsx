@@ -81,13 +81,13 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
   };
 
   render() {
-    const { isHome = false, isPost = false, post = {} } = this.props;
+    const { isPost = false, post = {} } = this.props;
     return (
       <>
         {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         <nav css={SiteNavStyles}>
           <SiteNavLeft className="site-nav-left">
-            {!isHome && <SiteNavLogo />}
+            {<SiteNavLogo />}
             <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
               <ul css={NavStyles} role="menu">
                 {/* TODO: mark current nav item - add class nav-current */}
@@ -97,9 +97,9 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 <li role="menuitem">
                   <Link to="/about">About</Link>
                 </li>
-                {/* <li role="menuitem">
-                  <Link to="/tags/getting-started/">Getting Started</Link>
-                </li> */}
+                <li role="menuitem">
+                  <Link to="/resume">Resume</Link>
+                </li>
               </ul>
               {isPost && (
                 <NavPostTitle ref={this.titleRef} className="nav-post-title">
@@ -146,7 +146,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
               )}
             </SocialLinks>
             {config.showSubscribe && (
-              <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
+              <SubscribeButton onClick={this.openModal}>구독하기</SubscribeButton>
             )}
           </SiteNavRight>
         </nav>
