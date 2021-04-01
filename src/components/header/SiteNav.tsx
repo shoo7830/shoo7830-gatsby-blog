@@ -11,7 +11,6 @@ import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
 import { Twitter } from '../icons/twitter';
 import { Github } from '../icons/github';
-import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
 interface SiteNavProps {
@@ -25,17 +24,10 @@ interface SiteNavState {
 }
 
 class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
-  subscribe = React.createRef<SubscribeModal>();
   titleRef = React.createRef<HTMLSpanElement>();
   lastScrollY = 0;
   ticking = false;
   state = { showTitle: false };
-
-  openModal = () => {
-    if (this.subscribe.current) {
-      this.subscribe.current.open();
-    }
-  };
 
   componentDidMount(): void {
     this.lastScrollY = window.scrollY;
@@ -84,16 +76,15 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
     const { isPost = false, post = {} } = this.props;
     return (
       <>
-        {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         <nav css={SiteNavStyles}>
           <SiteNavLeft className="site-nav-left">
             {<SiteNavLogo />}
             <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
               <ul css={NavStyles} role="menu">
                 {/* TODO: mark current nav item - add class nav-current */}
-                <li role="menuitem">
+                {/* <li role="menuitem">
                   <Link to="/">Home</Link>
-                </li>
+                </li> */}
                 <li role="menuitem">
                   <Link to="/about">About</Link>
                 </li>
@@ -145,9 +136,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 </a>
               )}
             </SocialLinks>
-            {config.showSubscribe && (
-              <SubscribeButton onClick={this.openModal}>구독하기</SubscribeButton>
-            )}
+
           </SiteNavRight>
         </nav>
       </>
