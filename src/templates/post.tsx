@@ -20,6 +20,7 @@ import { colors } from '../styles/colors';
 import { inner, outer, SiteMain } from '../styles/shared';
 import config from '../website-config';
 import { AuthorList } from '../components/AuthorList';
+import Utterances from '../components/Utterances';
 
 export interface Author {
   id: string;
@@ -230,6 +231,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                 </PostFullImage>
               )}
               <PostContent htmlAst={post.htmlAst} />
+              <Utterances repo="shoo7830/shoo7830.github.io" />
 
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
@@ -284,7 +286,7 @@ export const NoImage = css`
 export const PostFullHeader = styled.header`
   position: relative;
   margin: 0 auto;
-  padding: 70px 170px 50px;
+  padding: 70px 0 50px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
