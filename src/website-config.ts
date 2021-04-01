@@ -40,7 +40,7 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Coding-with.me',
+  title: 'Aria의 코딩생활',
   description: '야매가 8할 프론트엔드개발자',
   coverImage: 'img/writing.png',
   logo: 'img/ghost-logo.png',

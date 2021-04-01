@@ -13,8 +13,8 @@ export interface SubscribeProps {
 export const Subscribe: React.FC<SubscribeProps> = props => {
   return (
     <SubscribeFormSection>
-      <h3 css={SubscribeFormTitle}>Subscribe to {props.title}</h3>
-      <p>Get the latest posts delivered right to your inbox</p>
+      <h3 css={SubscribeFormTitle}> {props.title} 구독</h3>
+      <p>최신 게시물을 메일로 바로 받으세요.</p>
       <SubscribeForm />
     </SubscribeFormSection>
   );

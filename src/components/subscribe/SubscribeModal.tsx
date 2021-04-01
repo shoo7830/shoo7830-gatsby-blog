@@ -47,10 +47,9 @@ export class SubscribeModal extends React.Component<any, SubscribeState> {
         <SubscribeOverlayClose onClick={this.close} />
         <SubscribeOverlayContent>
           <SubscribeLogo />
-          <SubscribeOverlayTitle>Subscribe to {config.title}</SubscribeOverlayTitle>
+          <SubscribeOverlayTitle>{config.title}을 구독하세요.</SubscribeOverlayTitle>
           <SubscribeOverlayDescription>
-            Stay up to date! Get all the latest &amp; greatest posts delivered straight to your
-            inbox
+            최신 글이 등록되면 메일로 배달해드려요.
           </SubscribeOverlayDescription>
           <SubscribeForm />
         </SubscribeOverlayContent>
@@ -203,7 +202,6 @@ const SubscribeOverlayDescription = styled.p`
   margin: 0 auto 50px;
   max-width: 650px;
   color: #fff;
-  font-family: Georgia, serif;
   font-size: 2.4rem;
   line-height: 1.3em;
   font-weight: 300;

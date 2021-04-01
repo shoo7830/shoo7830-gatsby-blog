@@ -26,7 +26,7 @@ export const SubscribeForm: React.FC = () => {
           type="email"
           name={config.mailchimpEmailFieldName}
           id={config.mailchimpEmailFieldName}
-          placeholder="youremail@example.com"
+          placeholder="이메일주소 예)youremail@example.com"
         />
       </FormGroup>
       <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
