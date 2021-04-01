@@ -23,20 +23,11 @@ export interface WebsiteConfig {
   /**
    * hide or show all email subscribe boxes
    */
+  github?: string;
   showSubscribe: boolean;
   /**
    * create a list on mailchimp and then create an embeddable signup form. this is the form action
    */
-  mailchimpAction?: string;
-  /**
-   * this is the hidden input field name
-   */
-  mailchimpName?: string;
-  /**
-   * name and id of the mailchimp email field
-   */
-  mailchimpEmailFieldName?: string;
-  /**
   /**
    * Meta tag for Google Webmaster Tools
    */
@@ -49,18 +40,16 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Ghost',
-  description: 'The professional publishing platform',
-  coverImage: 'img/blog-cover.png',
+  title: 'Coding-with.me',
+  description: '야매가 8할 프론트엔드개발자',
+  coverImage: 'img/writing.png',
   logo: 'img/ghost-logo.png',
   lang: 'en',
   siteUrl: 'https://gatsby-casper.netlify.com',
-  facebook: 'https://www.facebook.com/ghost',
-  twitter: 'https://twitter.com/tryghost',
+  facebook: 'https://www.facebook.com/shoo7830',
+  twitter: 'https://twitter.com/shoo7830',
+  github: 'https://github.com/shoo7830',
   showSubscribe: true,
-  mailchimpAction: 'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
-  mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
-  mailchimpEmailFieldName: 'MERGE0',
   googleSiteVerification: 'GoogleCode',
   footer: 'is based on Gatsby Casper',
 };

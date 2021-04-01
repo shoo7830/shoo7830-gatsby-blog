@@ -10,6 +10,7 @@ import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
 import { Facebook } from '../icons/facebook';
 import { Twitter } from '../icons/twitter';
+import { Github } from '../icons/github';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 
@@ -96,9 +97,9 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 <li role="menuitem">
                   <Link to="/about">About</Link>
                 </li>
-                <li role="menuitem">
+                {/* <li role="menuitem">
                   <Link to="/tags/getting-started/">Getting Started</Link>
-                </li>
+                </li> */}
               </ul>
               {isPost && (
                 <NavPostTitle ref={this.titleRef} className="nav-post-title">
@@ -130,6 +131,17 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   rel="noopener noreferrer"
                 >
                   <Twitter />
+                </a>
+              )}
+              {config.github && (
+                <a
+                  css={SocialLink}
+                  href={config.github}
+                  title="Github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github />
                 </a>
               )}
             </SocialLinks>
