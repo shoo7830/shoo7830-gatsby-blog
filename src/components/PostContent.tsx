@@ -34,7 +34,6 @@ export const PostFullContent = styled.section`
   margin: 0 auto;
   padding: 0;
   min-height: 230px;
-  font-family: Georgia, serif;
   font-size: 2rem;
   line-height: 1.6em;
   background: #fff;
@@ -339,7 +338,6 @@ export const PostFullContent = styled.section`
     border: 0;
     /* color: var(--blue); */
     color: ${colors.blue};
-    font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
